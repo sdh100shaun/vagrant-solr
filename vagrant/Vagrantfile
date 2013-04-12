@@ -6,7 +6,7 @@ Vagrant::Config.run do |config|
   config.vm.box_url = "http://files.vagrantup.com/precise64.box"
 
   config.vm.forward_port 8893, 8893
-  
+  config.vm.forward_port 8080, 8080
 
   config.vm.share_folder "v-data", "/home/vagrant/data", "../data"
   config.vm.provision :chef_solo do |chef|
